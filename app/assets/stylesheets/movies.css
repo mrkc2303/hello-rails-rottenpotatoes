@@ -102,3 +102,32 @@ form input[type="submit"]:hover {
 .error-messages li {
   list-style: disc;
 }
+
+/* Container for the movie information */
+.movie-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Styling for individual elements */
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.movie-rating, .movie-release-date, .movie-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.movie-container p {
+  margin: 10px 0;
+}
+
+strong {
+  color: #333;
+}

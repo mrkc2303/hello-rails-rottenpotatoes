@@ -15,7 +15,7 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.rating %></td>
-        <td><%= movie.release_date %></td>
+        <td><%= movie.release_date.strftime("%d %B %Y") %></td>
         <td>
           <%= link_to 'Show', movie %> |
           <%= link_to 'Edit', edit_movie_path(movie) %> |
