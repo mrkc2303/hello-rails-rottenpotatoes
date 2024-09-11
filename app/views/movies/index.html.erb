@@ -1,0 +1,32 @@
+<h1>Movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <!-- Add sorting links for each column -->
+      <th><%= sortable "title", "Title" %></th>
+      <th><%= sortable "rating", "Rating" %></th>
+      <th><%= sortable "release_date", "Release Date" %></th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.rating %></td>
+        <td><%= movie.release_date %></td>
+        <td>
+          <%= link_to 'Show', movie %> |
+          <%= link_to 'Edit', edit_movie_path(movie) %> |
+          <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4"><%= link_to 'New Movie', new_movie_path %></td>
+    </tr>
+  </tfoot>
+</table>
